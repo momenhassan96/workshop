@@ -1,0 +1,25 @@
+<div class="nav-menu">
+    <div class="nav-menu__iconsbar">
+        <ul class="nav-menu__iconsbar__list">
+            <li class="nav-menu__iconsbar__item"><a routerLink=""><img
+                        src="../../../../assets/images/Path 19.png" /></a></li>
+            <li class="nav-menu__iconsbar__item"><a routerLink=""><img
+                        src="../../../../assets/images/Facebook.png" /></a></li>
+            <li class="nav-menu__iconsbar__item"><a routerLink=""><img
+                        src="../../../../assets/images/linkedin-4.png" /></a></li>
+            <li class="nav-menu__iconsbar__item"><a routerLink=""><img
+                        src="../../../../assets/images/surface-3.png" /></a></li>
+            <li class="nav-menu__iconsbar__item"><a routerLink=""><img
+                        src="../../../../assets/images/surface-4.png" /></a></li>
+        </ul>
+    </div>
+    <div class="nav-menu__listbar">
+        <ul *ngFor="let item of navItems" class="nav-menu__listbar__list">
+            <a [routerLink]="item.route" routerLinkActive="router-link-active" *ngIf="item.route"
+                class="nav-menu__listbar__list__parent">{{item.label}}</a>
+            <div *ngIf="!item.route" class="nav-menu__listbar__list__parent">{{item.label}}</div>
+            <li *ngFor="let child of item.children let last= last" class="nav-menu__listbar__list__child">
+                <a [routerLink]="item.route" routerLinkActive="router-link-active">{{child.label}}</a></li>
+        </ul>
+    </div>
+</div>

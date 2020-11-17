@@ -1,0 +1,132 @@
+<section>
+    <div class="w-100 h-100-px"></div>
+    <nav class="navbar navbar-expand-md fixed-top h-100-px">
+        <div class="w-100">
+            <ul class="navbar-nav">
+                <app-header-logo></app-header-logo>
+                <div class="container ml-auto">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <li class="nav-item">
+                                    <app-search></app-search>
+                                </li>
+                            </div>
+                            <div class="col-md-1">
+                                <li class="nav-item ml-auto">
+                                    <div class="custom">
+                                        <div ngbDropdown class="d-inline-block notification">
+                                            <button class="btn  notification__but" id="dropdownBasic1" ngbDropdownToggle
+                                                placement="bottom" ngbTooltip="Notifications" tooltipClass="custom">
+                                                <div class="parent-img">
+                                                    <img src="../../../../assets/images/notification (1).png"
+                                                        class="parent-img__img" />
+                                                    <div class="notification__alert"></div>
+                                                </div>
+
+                                            </button>
+                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1"
+                                                class="notification__menu dropdown-menu-right">
+                                                <div class="notification__menu__header">Recent Notification</div>
+                                                <button ngbDropdownItem class="notification__menu__item">
+                                                    You have an upcoming appointment today!
+                                                    <span class="notification__menu__item__special">Check-in Now</span>
+                                                </button>
+                                                <button ngbDropdownItem class="notification__menu__item">
+                                                    Rate your last service appointment
+                                                </button>
+                                                <button ngbDropdownItem class="notification__menu__item">
+                                                    Your payment request has been approved
+                                                </button>
+                                                <div>
+                                                    <button ngbDropdownItem
+                                                        class="notification__menu__item all-notification">
+                                                        <div class="all-notification__text">All Notifications</div>
+                                                        <span class="all-notification__wrap">
+                                                            <span class="all-notification__stick"></span>
+                                                            <span class="all-notification__triangle"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-md-3">
+                                <li class="user nav-item text-center">
+                                    <div class="height">
+                                        <div class="base-line">
+                                            <img src="../../../../assets/images/img.png"
+                                                class="user__img height__child" />
+                                            <span class="user__name">User Name</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-md-1">
+                                <li class=" nav-item text-right">
+                                    <div class="custom">
+                                        <div ngbDropdown class="d-inline-block settings">
+                                            <button class="btn" id="dropdownBasic2" ngbDropdownToggle placement="bottom"
+                                                ngbTooltip="Setting" tooltipClass="custom">
+                                                <div class="parent-img">
+                                                    <img src="../../../../assets/images/settings.png"
+                                                        class="parent-img__img">
+                                                </div>
+                                            </button>
+                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic2"
+                                                class="dropdown-menu-right settings__menu">
+                                                <span class="settings__titles">Language</span>
+                                                <div class="settings__first-group">
+                                                    <button ngbDropdownItem
+                                                        (click)="checkedEn = !checkedEn;checkedAr=false">
+                                                        <div class="flex-item">
+                                                            <span class="text">English</span>
+                                                            <span>
+                                                                <fa-icon [icon]="faCheck" [classes]="['main-color']"
+                                                                    size="lg" *ngIf="checkedEn">
+                                                                </fa-icon>
+                                                            </span>
+                                                        </div>
+                                                    </button>
+                                                    <button ngbDropdownItem
+                                                        (click)="checkedAr = !checkedAr;checkedEn = false;">
+                                                        <div class="flex-item mb-2">
+                                                            <span class="text">الغه العربيه</span>
+                                                            <span>
+                                                                <fa-icon [icon]="faCheck" [classes]="['main-color']"
+                                                                    size="lg" *ngIf="checkedAr">
+                                                                </fa-icon>
+                                                            </span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <span class="settings__titles d-inline-block mt-2">Font Size</span>
+                                                <div class="settings__second-group">
+                                                    <div class="p-0 px-4">
+                                                        <div class="flex-item-2">
+                                                            <span class="large-font mr-2 p-0" ngbDropdownItem>A</span>
+                                                            <span class="medium-font  mr-2 p-0" ngbDropdownItem>A</span>
+                                                            <span class="small-font p-0" ngbDropdownItem>A</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="settings__titles">Font Size</span>
+                                                <div class="settings__third-group">
+                                                    <button ngbDropdownItem>Sign out</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+<app-menu-header *ngIf="isHumburgerMenu"></app-menu-header>

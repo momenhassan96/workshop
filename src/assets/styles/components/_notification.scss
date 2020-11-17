@@ -1,0 +1,106 @@
+.custom .dropdown-toggle {
+    margin-top: 0 !important;
+}
+.notification {
+    display: flex;
+    &__but {
+        background-color: transparent;
+        border: none;
+        outline: none !important;
+        &:hover .notification__alert {
+            background-color: $white-color;
+        }
+        & img {
+            width: calculate-rem(28px);
+            height: calculate-rem(31px);
+        }
+    }
+    &__alert {
+        background-color: $green-color;
+        height: calculate-rem(12px);
+        width: calculate-rem(12px);
+        border-radius: 50%;
+        position: absolute;
+        top: calculate-rem(15px);
+        right: calculate-rem(21px);
+    }
+
+    &__menu {
+        &__header {
+            color: #d8d8d8;
+            padding-left: calculate-rem(21px);
+            font-size: calculate-rem(18px);
+            font-weight: 500;
+            margin-top: calculate-rem(10px);
+        }
+
+        &__item {
+            font-size: calculate-rem(20px) !important;
+            font-weight: 400 !important;
+            color: $dark-color !important;
+            padding: calculate-rem(15px) calculate-rem(23px) !important;
+            white-space: normal !important;
+            width: calculate-rem(395px) !important;
+            &:not(:last-child) {
+                border-bottom: solid 1px #d8d8d8 !important;
+            }
+            &__special {
+                color: $green-color;
+                font-size: inherit;
+                font-weight: inherit;
+                display: inline-block;
+                margin-left: calculate-rem(5px);
+            }
+        }
+    }
+}
+
+.all-notification {
+    color: $green-color !important;
+    text-align: center !important;
+    font-weight: 600;
+    display: flex !important;
+    transition: all 0.5s;
+    justify-content: center;
+    &__text {
+        font-size: calculate-rem(20px) !important;
+        display: inline-block;
+    }
+    &__wrap {
+        display: inline-block;
+        margin-left: calculate-rem(10px);
+        width: 63px;
+        text-align: left;
+    }
+    &__stick {
+        background-color: $green-color;
+        width: calculate-rem(25px);
+        height: calculate-rem(4px);
+        display: inline-block;
+        margin: calculate-rem(0.5px);
+        transition: all 0.5s;
+    }
+
+    &__triangle {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: calculate-rem(5px) solid transparent;
+        border-left: calculate-rem(10px) solid $green-color;
+        border-bottom: solid calculate-rem(5px) transparent;
+        margin: calculate-rem(-2px);
+        transition: all 0.5s;
+    }
+
+    &:hover &__stick {
+        padding-right: calculate-rem(35px);
+        background-color: $sky-color;
+    }
+
+    &:hover &__triangle {
+        border-left-color: $sky-color;
+    }
+    &:hover {
+        color: $sky-color !important;
+    }
+}

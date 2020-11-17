@@ -1,0 +1,56 @@
+.settings {
+    &__menu {
+        width: calculate-rem(300px);
+
+    }
+    &__titles {
+        color: #d8d8d8;
+        padding-left: calculate-rem(21px);
+        font-size: calculate-rem(18px);
+        font-weight: 500;
+        margin-top: calculate-rem(10px);
+    }
+
+    &__first-group {
+        border-bottom: solid 1px #d8d8d8 !important;
+    }
+    &__second-group {
+    }
+    &__third-group {
+    }
+}
+
+.flex-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-item-2{
+    @extend .flex-item;
+    justify-content:left;
+    align-items: baseline;
+}
+
+.large-font{
+    font-size: calculate-rem(40px) !important;
+    font-weight: 900 !important;
+}
+
+.medium-font{
+    font-size: calculate-rem(35px) !important;
+    font-weight: 800 !important;
+}
+
+.small-font{
+    font-size: calculate-rem(30px) !important;
+    font-weight: 600 !important;
+}
+
+
+.text{
+    font-size: calculate-rem(24px) !important; 
+}
+.main-color{
+    color:$green-color;
+}

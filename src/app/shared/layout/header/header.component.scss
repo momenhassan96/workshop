@@ -1,0 +1,16 @@
+
+@import '../../../../assets/styles/abstract/index';
+
+::ng-deep .tooltip-inner {
+    background-color: rgba($dark-color,.3);
+    color: $white-color;
+    padding:calculate-rem(5px) calculate-rem(15px);
+}
+
+::ng-deep .bs-tooltip-bottom .arrow, .bs-tooltip-auto[x-placement^=bottom] .arrow {
+    display: none !important;
+}
+
+::ng-deep .parent .tooltip-inner{
+    transform: translateY(15px);
+}

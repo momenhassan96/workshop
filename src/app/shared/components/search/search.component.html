@@ -1,0 +1,17 @@
+<div class="parent">
+    <button class="holder-1" *ngIf="!clicked" (click)="clicked = !clicked"
+        placement="bottom" ngbTooltip="Search" tooltipClass="custom">
+        <div class="special-img">
+            <img src="../../../../assets/images/search.png"
+                class="special-img__img" />
+        </div>
+    </button>
+    <button class="parent__input__holder" (click)="clicked = !clicked">
+        <div class="special-img">
+            <img src="../../../../assets/images/search.png"
+                class="special-img__img" />
+        </div>
+    </button>
+    <input type="text" class="form-control parent__input" *ngIf="clicked"
+        placeholder="Search" />
+</div>

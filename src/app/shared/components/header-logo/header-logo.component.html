@@ -1,0 +1,25 @@
+<ul class="navbar-nav">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <li class="nav-icon nav-item" ngbDropdown>
+                        <a id="id01" ngbDropdownToggle (click)="changeState()" class="height">
+                            <div class="menu-bar-1" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'topX'">
+                            </div>
+                            <div class="menu-bar-1" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'hide'">
+                            </div>
+                            <div class="menu-bar-2" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'bottomX'"></div>
+                        </a>
+                    </li>
+                </div>
+                <div class="col-md-6">
+                    <li class="nav-item">
+                        <a class="navbar-brand height logo" [routerLink]="'home'"><img src="../../../../assets/images/Link_logo_vertical_color_Light_RGB.png" /></a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</ul>
+

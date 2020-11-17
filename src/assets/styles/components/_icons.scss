@@ -1,0 +1,29 @@
+.parent-img {
+    width: calculate-rem(45px);
+    height: calculate-rem(45px);
+    border-radius: calculate-rem(5px);
+
+    &__img{
+        width: calculate-rem(30px);
+        height: calculate-rem(30px);
+        margin-top:calculate-rem(8px);
+    }
+
+    &:hover{
+        background-color: $green-color;
+    }
+}
+
+.special-img{
+    width: calculate-rem(42px);
+    height: calculate-rem(42px);
+    border-radius: calculate-rem(5px);
+    margin-top:calculate-rem(6px);
+
+    &__img{
+        width: calculate-rem(28px);
+        height: calculate-rem(28px);
+        margin-top:calculate-rem(8px);
+    }
+}
+

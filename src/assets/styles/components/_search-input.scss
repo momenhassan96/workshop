@@ -1,0 +1,57 @@
+.parent{
+    transition: all .5s;
+    display: flex;
+    flex-direction: row-reverse;
+    &__input {
+        position: relative;
+        width: 1000% !important;
+        background-color: $input-color !important;
+        padding:21px !important;
+        border: solid 1px $input-color !important;
+        color:$white-color!important;
+        margin-top:calculate-rem(8px);
+        &::placeholder{
+            color:$placeholder-color !important;
+        }
+        &:focus{
+            outline: none !important;
+        }
+        &__holder {
+            position: absolute;
+            top: 2px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            transition: all .5s;
+            background-color: transparent;
+            border:none;
+            outline: none;
+            z-index: 99;
+            transition: all .5s;
+            &:focus{
+                background-color: transparent;
+            }
+        }
+        &__img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    
+}
+
+.holder-1{
+    @extend .parent__input__holder;
+    z-index:999;
+    &:hover > .special-img{
+        background-color: $green-color;
+    }
+    // &:hover{
+    //     background-color: $green-color;
+    //     cursor: pointer;  
+    // }
+}
+
+
+
