@@ -8,3 +8,7 @@
  .h-100{
      height: 100%;
  }
+
+ .margin{
+    margin:calculate-rem(0px) calculate-rem(80px) !important;
+ }

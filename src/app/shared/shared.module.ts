@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchComponent } from './components/search/search.component';
 import { HeaderLogoComponent } from './components/header-logo/header-logo.component';
 import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -17,7 +18,8 @@ import { MenuHeaderComponent } from './components/menu-header/menu-header.compon
     CommonModule,
     RouterModule,
     BootstrapModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FlexLayoutModule
   ],
   exports:[
     FooterComponent,
