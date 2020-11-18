@@ -31,35 +31,230 @@
     }
 }
 
-.text-carousel{
+.text-carousel {
     transform: translate(0, -132px);
 
-    &__header{
+    &__header {
         font-size: calculate-rem(40px) !important;
         font-weight: 600 !important;
         margin-bottom: calculate-rem(30px);
     }
 
-    &__pragraph{
+    &__pragraph {
         font-size: calculate-rem(24px) !important;
         font-weight: 400 !important;
         line-height: 1.5;
     }
 
-    &__but{
-        background-color:$green-color;
-        border:solid 1px $green-color;
-        color:$white-color;
-    padding: calculate-rem(15px);
+    &__but {
+        background-color: $green-color;
+        border: solid 1px $green-color;
+        color: $white-color;
+        padding: calculate-rem(15px);
         border-radius: calculate-rem(5px);
     }
 }
 
-.carousel-indicators{
+.carousel-indicators {
     margin-bottom: 40px;
 }
-.carousel-indicators li{
+.carousel-indicators li {
     width: calculate-rem(20px) !important;
     height: calculate-rem(20px) !important;
     border-radius: 50%;
+}
+
+.latest-news {
+    &__title {
+        &__header {
+            font-weight: 600;
+        }
+        &__link {
+            color: $green-color;
+            &:hover {
+                text-decoration: none;
+                color: $green-color;
+            }
+
+            &__icon {
+                margin-left: 6px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+:host {
+    display: block;
+}
+
+#our-programs {
+    color: $white-color;
+    &:before {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: rgba(#000, 0.7);
+        display: block;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    position: relative;
+    background: no-repeat center center scroll;
+    background-size: cover;
+    height: 100%;
+    //min-height: calculate-rem(600px);
+    padding: calculate-rem(50px) 0 calculate-rem(85px);
+    & > * {
+        position: relative;
+    }
+}
+
+.section-header {
+    margin-bottom: calculate-rem(45px);
+
+    .title {
+        margin-bottom: calculate-rem(17px);
+        font-size: calculate-rem(36px);
+        line-height: 1;
+    }
+
+    .subtitle {
+        font-size: calculate-rem(24px);
+        line-height: 1;
+    }
+}
+
+.program {
+    text-align: center;
+    border: 2px solid #fff;
+    display: inline-block;
+    height: calculate-rem($side-length);
+    width: calculate-rem($side-length);
+    margin: calculate-rem($gutter / 2);
+    transition: all 0.2s;
+    &:hover {
+        background-color: $primary-color;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.2s;
+    }
+    .program-name {
+        font-family: Calibri;
+        font-size: calculate-rem($name-font-size);
+        margin: calculate-rem($name-margin-top) auto 0;
+        line-height: 1;
+    }
+    .program-image {
+        margin-top: calculate-rem($image-margin-top);
+        max-height: 34%;
+    }
+    .program-action {
+        font-size: calculate-rem($action-font-size);
+        padding: 0;
+        font-family: Segoe UI;
+        font-weight: 700;
+        line-height: 1;
+    }
+    @include media-breakpoint-up(sm) {
+        $side-length: $side-length - $side-length * 35 / 100;
+        $diameter: $diameter - $diameter * 35 / 100;
+        $gutter: $gutter - $gutter * 35 / 100;
+        height: calculate-rem($side-length);
+        width: calculate-rem($side-length);
+        margin: 0 calculate-rem($gutter / 2) calculate-rem($gutter / 2);
+        .odd & {
+            $rows-gutter: $rows-gutter - $rows-gutter * 35 / 100;
+            margin-top: calculate-rem($gutter / 2);
+        }
+        .program-name {
+            $name-margin-top: $name-margin-top - $name-margin-top * 35 / 100;
+            $name-font-size: $name-font-size - $name-font-size * 35 / 100;
+            margin-top: calculate-rem($name-margin-top);
+            font-size: calculate-rem($name-font-size);
+        }
+        .program-image {
+            $image-margin-top: $image-margin-top - $image-margin-top * 35 /100;
+            margin-top: calculate-rem($image-margin-top);
+        }
+        .program-action {
+            $action-font-size: $action-font-size - $action-font-size * 35 / 100;
+            font-size: calculate-rem($action-font-size);
+        }
+    }
+    @include media-breakpoint-up(md) {
+        $side-length: $side-length - $side-length * 35 / 100;
+        $diameter: $diameter - $diameter * 35 / 100;
+        $gutter: $gutter - $gutter * 35 / 100;
+        transform: rotate(45deg);
+        margin: 0 calculate-rem(($diameter - $side-length) / 2 + ($gutter / 2));
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+        .odd & {
+            $rows-gutter: $rows-gutter - $rows-gutter * 35 / 100;
+            margin-top: calculate-rem($rows-gutter + $gutter);
+        }
+        .wrapper {
+            transform: rotate(-45deg);
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        $side-length: $side-length - $side-length * 25 / 100;
+        $diameter: $diameter - $diameter * 25 / 100;
+        $gutter: $gutter - $gutter * 25 / 100;
+
+        height: calculate-rem($side-length);
+        width: calculate-rem($side-length);
+        margin: 0 calculate-rem(($diameter - $side-length) / 2 + ($gutter / 2));
+        .odd & {
+            $rows-gutter: $rows-gutter - $rows-gutter * 25 / 100;
+            margin-top: calculate-rem($rows-gutter + $gutter);
+        }
+        .program-name {
+            $name-margin-top: $name-margin-top - $name-margin-top * 25 / 100;
+            $name-font-size: $name-font-size - $name-font-size * 25 / 100;
+            margin-top: calculate-rem($name-margin-top);
+            font-size: calculate-rem($name-font-size);
+        }
+        .program-image {
+            $image-margin-top: $image-margin-top - $image-margin-top * 25 /100;
+            margin-top: calculate-rem($image-margin-top);
+        }
+        .program-action {
+            $action-font-size: $action-font-size - $action-font-size * 25 / 100;
+            font-size: calculate-rem($action-font-size);
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        height: calculate-rem($side-length);
+        width: calculate-rem($side-length);
+        margin: 0 calculate-rem(($diameter - $side-length) / 2 + ($gutter / 2));
+        .odd & {
+            margin-top: calculate-rem($rows-gutter + $gutter);
+        }
+        .program-name {
+            margin-top: calculate-rem($name-margin-top);
+            font-size: calculate-rem($name-font-size);
+        }
+        .program-image {
+            margin-top: calculate-rem($image-margin-top);
+        }
+        .program-action {
+            font-size: calculate-rem($action-font-size);
+        }
+    }
 }

@@ -10,10 +10,9 @@
 }
 .navbar {
     background-color: $primary-color;
+    z-index: 999999;
     & .navbar-nav {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
+        width:100%;
 
         & .dropdown-toggle {
             margin-top: calculate-rem(10px);
@@ -49,6 +48,7 @@
     border-top: solid 1px #0d8c9a;
     display: flex;
     justify-content: center;
+    z-index: 99999;
 
     &__iconsbar {
         width: 30%;

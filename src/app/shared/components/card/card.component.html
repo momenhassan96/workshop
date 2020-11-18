@@ -1,0 +1,57 @@
+<section class="mt-3">
+    <div class="card card-section">
+        <img [src]="data['urlToImage']" class="card-img-top" height="287px" alt="...">
+        <div class="container-fluid card-section__icons">
+            <div class="row text-right mr-2">
+                <div class="col-md-12 mt-3">
+                    <span class="card-section__icons__icon ml-auto d-inline-block  mx-3" (click)="addClass = !addClass">
+                        <span class="card-section__icons__icon__heart" [ngClass]="addClass ? 'heart-image' :''">
+                            <fa-icon [icon]="faHeart" size="lg"></fa-icon>
+                        </span>
+                        <span class="card-section__icons__icon__heart__img"><img
+                                src="../../../../assets/images/ic_favorite_border_24px.png" /></span>
+                    </span>
+                    <span class="card-section__icons__icon ml-auto d-inline-block" (click)="openMenu = !openMenu"
+                        [ngClass]="openMenu ? 'scale' : ''">
+                        <fa-icon [icon]="faShareAlt" size="lg"></fa-icon>
+                    </span>
+                    <div class="card-section__icons__social text-right mt-2">
+                        <span class="card-section__icons__social__social-icons"
+                            [ngClass]="openMenu ? 'heart-image' : ''">
+                            <a routerLink="">
+                                <span class="d-inline-block facebook">
+                                    <img src="../../../../assets/images/Facebook.png" class="img-social" />
+                                </span>
+                            </a>
+                            <a routerLink="">
+                                <span class="d-inline-block twitter">
+                                    <img src="../../../../assets/images/Path 19.png" class="img-social" />
+                                </span>
+                            </a>
+                            <a routerLink="">
+                                <span class="d-inline-block parent-gmail">
+                                    <fa-icon [icon]="faEnvelopr" size="lg" class="gmail"></fa-icon>
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title card-section__title"> <a routerLink="" class="">{{data['title'] | limit :70}}</a></h5>
+            <span class="card-section__type">News</span>
+            <p class="card-text card-section__body mt-2 mb-5">{{data['description'] | limit :90}}</p>
+            <div class="container-fluid card-section__footer">
+                <div class="row">
+                    <div class="col-sm-2 col-md-1 mr-md-1">
+                        <img src="../../../../assets/images/calender.png" class="card-section__footer__img" />
+                    </div>
+                    <div class="col-sm-8 col-md-10">
+                        <p class="card-section__footer__date">{{data['publishedAt'] | date}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

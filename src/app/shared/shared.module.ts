@@ -9,11 +9,14 @@ import { SearchComponent } from './components/search/search.component';
 import { HeaderLogoComponent } from './components/header-logo/header-logo.component';
 import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CardComponent } from './components/card/card.component';
+import { LimitPipe } from './pipes/limit.pipe';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, SearchComponent, HeaderLogoComponent, MenuHeaderComponent],
+  declarations: [FooterComponent, HeaderComponent, SearchComponent, HeaderLogoComponent, MenuHeaderComponent, CardComponent, LimitPipe, CarouselComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -27,7 +30,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BootstrapModule,
     SearchComponent,
     HeaderLogoComponent,
-    MenuHeaderComponent
+    MenuHeaderComponent,
+    CardComponent,
+    FontAwesomeModule,
+    LimitPipe,
+    CarouselComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule { 
+
+}

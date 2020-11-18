@@ -8,7 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { FeatureModule } from './feature/feature.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +20,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     SharedModule,
     FeatureModule,
     BrowserAnimationsModule,
-    FlexLayoutModule 
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
