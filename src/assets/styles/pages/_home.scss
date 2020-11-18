@@ -1,0 +1,65 @@
+.home {
+    &__overlay {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+.carousel-item > img {
+    height: 600px !important;
+    object-fit: cover !important;
+}
+
+.icon {
+    background-color: $light-color !important;
+    height: calculate-rem(39px) !important;
+    width: calculate-rem(43px) !important;
+    border-radius: calculate-rem(5px);
+    &__img {
+        display: inline-block !important;
+        width: calculate-rem(12px) !important;
+        margin: calculate-rem(9px) !important;
+    }
+}
+
+.text-carousel{
+    transform: translate(0, -132px);
+
+    &__header{
+        font-size: calculate-rem(40px) !important;
+        font-weight: 600 !important;
+        margin-bottom: calculate-rem(30px);
+    }
+
+    &__pragraph{
+        font-size: calculate-rem(24px) !important;
+        font-weight: 400 !important;
+        line-height: 1.5;
+    }
+
+    &__but{
+        background-color:$green-color;
+        border:solid 1px $green-color;
+        color:$white-color;
+    padding: calculate-rem(15px);
+        border-radius: calculate-rem(5px);
+    }
+}
+
+.carousel-indicators{
+    margin-bottom: 40px;
+}
+.carousel-indicators li{
+    width: calculate-rem(20px) !important;
+    height: calculate-rem(20px) !important;
+    border-radius: 50%;
+}
