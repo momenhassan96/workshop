@@ -1,0 +1,38 @@
+.search{
+
+    &__group{
+
+    }
+
+    &__input{
+        width: 100%;
+        position: relative;
+        padding: 4px;
+    }
+
+    &__but{
+        position: absolute;
+        top:0;
+        right: 0;
+
+        & button{
+            background-color: $green-color !important;
+            border: solid 1px $green-color !important;
+            color:$white-color !important;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding: calculate-rem(6px);
+            width: calculate-rem(94px);
+            height: calculate-rem(38px);
+
+            & img{
+                width:calculte-rem(25px);
+                height:calculate-rem(25px);
+            }
+        }
+    }
+}
+
+.marginTop{
+    margin-top: calculate-rem(33px);
+}

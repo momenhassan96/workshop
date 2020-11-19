@@ -1,0 +1,31 @@
+[1119/115300.721:ERROR:settings.cc(320)] Settings magic is not 1129342067
+[1119/115300.728:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1119/120300.743:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1119/120300.812:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\161b1f1c-71a1-4477-8f07-d95c8be71ec9: The system cannot find the path specified. (0x3)
+[1119/120300.820:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\1a145832-4011-43be-8fdb-bfd9d30ce131: The system cannot find the path specified. (0x3)
+[1119/120300.843:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\3833f6d7-24e3-496b-b083-8c7905cefc9a: The system cannot find the path specified. (0x3)
+[1119/120300.912:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\4927eb01-b04f-4248-b2a2-a6f350fe76f4: The system cannot find the path specified. (0x3)
+[1119/120300.926:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\4ebd7334-8afa-488f-b0fc-41cfd8d426e7: The system cannot find the path specified. (0x3)
+[1119/120300.932:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\568046a3-bf5b-442e-afdb-889a7e50899f: The system cannot find the path specified. (0x3)
+[1119/120300.942:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\7320cf25-8270-4f93-a8da-e8b1d0b1b0ba: The system cannot find the path specified. (0x3)
+[1119/120300.969:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\79df69ba-ea77-41d4-a830-d3293ba935fd: The system cannot find the path specified. (0x3)
+[1119/120301.001:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\7b2048f8-78a8-4b89-b3e2-db5fac697a4a: The system cannot find the path specified. (0x3)
+[1119/120301.016:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\7e4c78ea-7034-4f43-b5ee-62137e17e2d5: The system cannot find the path specified. (0x3)
+[1119/120301.032:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\80a6cf38-6369-4d82-8627-9a558516fdd0: The system cannot find the path specified. (0x3)
+[1119/120301.047:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\83647e23-cf4b-40cf-93a4-8fa21fc87719: The system cannot find the path specified. (0x3)
+[1119/120301.061:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\a71d5aa4-314c-42e4-9f9e-e0e9383df99d: The system cannot find the path specified. (0x3)
+[1119/120301.074:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\baa590c7-379f-4dda-954a-fff023acfff6: The system cannot find the path specified. (0x3)
+[1119/120301.086:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\c336a678-c455-45fe-85de-215217d636bc: The system cannot find the path specified. (0x3)
+[1119/120301.093:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\cb3b4113-6d2d-4a79-a7f5-8122a2186221: The system cannot find the path specified. (0x3)
+[1119/120301.106:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\d7857e38-4136-4893-97aa-73f43935f1fd: The system cannot find the path specified. (0x3)
+[1119/120301.132:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\ed3a2cc6-c065-476d-bd38-a95a0f00b203: The system cannot find the path specified. (0x3)
+[1119/120301.154:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\f0631cc0-2d54-437e-be66-43b2e23f496f: The system cannot find the path specified. (0x3)
+[1119/120301.165:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\f15ebc24-539d-4556-a1c9-6bd5a621a2bc: The system cannot find the path specified. (0x3)
+[1119/120301.173:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1119/120301.173:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1119/120301.173:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1119/120800.728:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1119/122300.729:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1119/123800.729:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1119/125300.729:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1119/130800.730:ERROR:crash_report_database_win.cc(457)] unexpected header
