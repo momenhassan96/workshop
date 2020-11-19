@@ -1,6 +1,9 @@
-<section class="mt-3">
+<section class="py-4" style="height:100%">
     <div class="card card-section">
-        <img [src]="data['urlToImage']" class="card-img-top" height="287px" alt="...">
+        <img [src]="data['urlToImage']" class="card-img-top" height="287px" alt="..." style="object-fit:cover"
+            *ngIf="!details">
+        <img [src]="data['urlToImage']" class="card-img-top" height="350px" alt="..." style="object-fit:cover"
+            *ngIf="details">
         <div class="container-fluid card-section__icons">
             <div class="row text-right mr-2">
                 <div class="col-md-12 mt-3">
@@ -39,16 +42,27 @@
             </div>
         </div>
         <div class="card-body">
-            <h5 class="card-title card-section__title"> <a routerLink="" class="">{{data['title'] | limit :70}}</a></h5>
-            <span class="card-section__type">News</span>
-            <p class="card-text card-section__body mt-2 mb-5">{{data['description'] | limit :90}}</p>
-            <div class="container-fluid card-section__footer">
-                <div class="row">
-                    <div class="col-sm-2 col-md-1 mr-md-1">
-                        <img src="../../../../assets/images/calender.png" class="card-section__footer__img" />
-                    </div>
-                    <div class="col-sm-8 col-md-10">
-                        <p class="card-section__footer__date">{{data['publishedAt'] | date}}</p>
+            <div class="card-body__card-header">
+                <h5 class="card-title card-section__title"> <a routerLink="" class=""
+                        *ngIf="!details">{{data['title'] | limit :120}}</a></h5>
+                <h5 class="card-title card-section__title"> <a routerLink="" class=""
+                        *ngIf="details">{{data['title'] }}</a></h5>
+                <span class="card-section__type">News</span>
+            </div>
+            <div class="card-body__card-content">
+                <p class="card-text card-section__body mt-2" *ngIf="!details">{{data['description'] | limit :150}}</p>
+                <p class="card-text card-section__body mt-2" *ngIf="details">{{data['description']}}</p>
+            </div>
+            <div class="card-body__card-actins mt-5 my-3">
+                <a [routerLink]="['/news-details', data['id']]" class="read-more" *ngIf="!details">Read more</a>
+                <div class="container-fluid card-section__footer">
+                    <div class="row" *ngIf="!details">
+                        <div class="col-2 col-md-1 mr-md-1 ">
+                            <img src="../../../../assets/images/calender.png" class="card-section__footer__img" />
+                        </div>
+                        <div class="col-8 col-md-10">
+                            <p class="card-section__footer__date">{{data['publishedAt'] | date}}</p>
+                        </div>
                     </div>
                 </div>
             </div>

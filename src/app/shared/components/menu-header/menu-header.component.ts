@@ -22,7 +22,7 @@ export class MenuHeaderComponent implements OnInit {
       {
         label: 'News',
         children: [
-          { label: 'News', route: '/news' },
+          { label: 'News', route: '/news-listing' },
           { label: 'Events', route: '/events' }
         ]
       },

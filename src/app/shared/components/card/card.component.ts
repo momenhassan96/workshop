@@ -14,6 +14,7 @@ export class CardComponent implements OnInit {
   openMenu = false;
   addClass = false;
   @Input() data: object;
+  @Input() details:boolean;
   constructor() { 
 
    

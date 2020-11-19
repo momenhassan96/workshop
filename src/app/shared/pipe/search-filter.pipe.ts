@@ -9,7 +9,7 @@ export class SearchFilterPipe implements PipeTransform {
   constructor(private service: GetDataService) {
     this.service.getAllData().subscribe(response => this.allData = response['articles']);
   }
-  transform(value: Array<{}>, searchText: string, id: number, clicked: boolean): any {
+  transform(value: Array<{}>, searchText: string, id: number | string, clicked: boolean): any {
     if (searchText && id && clicked) {
       const _newInstance = this.allData.filter(item => {
         if (Object.values(item).toString().toLowerCase().includes(searchText.toLowerCase()) && item['sourceID'] == id) {

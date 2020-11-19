@@ -1,0 +1,35 @@
+.card-related{
+    .card-img{
+      min-height: 400px;
+      object-fit: cover;
+      opacity: .5;
+    }
+    border: none;
+    .card-title{
+      font-weight: 900;
+    }
+    .card-subtitle{
+      color: $gray-dark;
+      margin-bottom: 0px;
+      font-size: 12px;
+    }
+    .text-wrapper{
+      padding: 20px;
+      padding-bottom: 10px;
+      background-color: rgba(255, 255, 255, 0.75);
+      top: unset;
+      bottom: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 7.5px;
+      border-radius: 5px;
+    }
+  }
+  
+  .col-md-4{
+    position: relative;
+    width: 100%;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }

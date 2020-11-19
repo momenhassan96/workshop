@@ -1,6 +1,6 @@
 .card-section {
     width:100% !important;
-    height:calculate-rem(630px) !important;
+    height:100% !important;
     &__icons {
         &__icon {
             color: $green-color;
@@ -65,7 +65,8 @@
     }
 
     &__footer{
-        
+        left: calculate-rem(21px);
+        bottom: calculate-rem(13px);
         &__img{
             height:calculate-rem(18.76px);
             width:calculate-rem(20.85px);
@@ -116,4 +117,12 @@
 
 .card-body{
     padding: calculate-rem(14px) calculate-rem(14px) 0 !important;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 1px;
+
+    &__card-content{
+        flex:1;
+    }
 }

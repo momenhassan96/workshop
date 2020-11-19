@@ -1,0 +1,15 @@
+<section class="container-xl news-details" style="min-height: 326px;">
+    <app-bread-crump [data]="[{name:'Home',route:''},{name:'News',route:'/news-listing'},{name:'Details'}]"></app-bread-crump>
+    <div class="my-4">
+        <h4 class="news-details__header">News</h4>
+    </div>
+    <div class="col-md-12 my-4">
+        <app-card [data]="item" [details]="true"></app-card>
+    </div>
+    <div class="row mb-4">
+        <div class="col-sm-12 col-md-12 col-lg-4 p-2" *ngFor="let item of relatedTopics">
+            <app-related-topics [imgUrl]="item['imgUrl']" [subTitle]="item['subTitle']" [title]="item['title']"></app-related-topics>
+        </div>
+    </div>
+
+</section>

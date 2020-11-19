@@ -19,7 +19,7 @@
                 class="nav-menu__listbar__list__parent">{{item.label}}</a>
             <div *ngIf="!item.route" class="nav-menu__listbar__list__parent">{{item.label}}</div>
             <li *ngFor="let child of item.children let last= last" class="nav-menu__listbar__list__child">
-                <a [routerLink]="item.route" routerLinkActive="router-link-active">{{child.label}}</a></li>
+                <a [routerLink]="child.route" routerLinkActive="router-link-active">{{child.label}}</a></li>
         </ul>
     </div>
 </div>

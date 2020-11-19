@@ -22,7 +22,8 @@ export class NewsListingComponent implements OnInit {
   lengthOfArray: number;
   getDataDisplayLength: number;
   faLongArrowAltRight = faLongArrowAltRight;
-  clickedToSearch:boolean;
+  clickedToSearch: boolean;
+  percentage = 0;
   _data: Array<{}>;
   ngOnInit(): void {
     this.service.getAllData().subscribe(response => {
@@ -35,8 +36,18 @@ export class NewsListingComponent implements OnInit {
   }
 
   filterData(formValue) {
+    this.percentage = 0;
     this.clickedToSearch = true;
-  }
+    const interval = setInterval(() => {
+      this.percentage += 1;
+      if (this.percentage == 100) {
+        clearInterval(interval)
+        this.percentage = 0;
+      }
+    }, 60)
+  };
+
+
 
   enterClicked($event, formValue) {
     if ($event.code === 'Enter') {
@@ -45,16 +56,16 @@ export class NewsListingComponent implements OnInit {
   }
 
   loadMore() {
-      this.getDataDisplayLength = this.firstItemsDisplay.length;
-      const newDispaly = this.getDataDisplayLength + 6;
-      const checked = this.lengthOfArray - newDispaly;
-      if (checked % 2 === 0) {
-        this.firstItemsDisplay = [];
-        const newArr = this.allData.slice(0, newDispaly).reverse();
-        newArr.forEach(ietm => { this.firstItemsDisplay.push(ietm); });
-      } else {
-        const newArr = this.allData.slice(0, this.lengthOfArray).reverse();
-        newArr.forEach(ietm => { this.firstItemsDisplay.push(ietm); });
-      }
+    this.getDataDisplayLength = this.firstItemsDisplay.length;
+    const newDispaly = this.getDataDisplayLength + 6;
+    const checked = this.lengthOfArray - newDispaly;
+    if (checked % 2 === 0) {
+      this.firstItemsDisplay = [];
+      const newArr = this.allData.slice(0, newDispaly).reverse();
+      newArr.forEach(ietm => { this.firstItemsDisplay.push(ietm); });
+    } else {
+      const newArr = this.allData.slice(0, this.lengthOfArray).reverse();
+      newArr.forEach(ietm => { this.firstItemsDisplay.push(ietm); });
     }
   }
+}

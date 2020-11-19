@@ -34,6 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: $main-color !important;
 }
 ol, ul {
 	list-style: none;
@@ -63,3 +64,9 @@ input:focus{
 	padding:0 !important; 
 }
 
+
+
+.card{
+	border:none !important;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

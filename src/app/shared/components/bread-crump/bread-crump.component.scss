@@ -1,0 +1,9 @@
+@import '../../../../assets/styles/abstract/index';
+.breadcrumb{
+    background-color: $main-color !important;
+}
+
+
+.breadcrumb-item + .breadcrumb-item::before{
+    content: '>' !important;
+}

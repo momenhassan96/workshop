@@ -2,9 +2,9 @@
     <div class="w-100 h-100-px"></div>
     <nav class="navbar navbar-expand-md fixed-top h-100-px">
         <div class="container-xl">
-            <ul class="navbar-nav">
-                <app-header-logo></app-header-logo>
-                <div class="container-fluid ml-auto">
+            <ul class="container-fluid mb-0">
+                <app-header-logo class="col-3"></app-header-logo>
+                <div class="col-9 ml-auto">
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-7">
@@ -12,7 +12,7 @@
                                     <app-search></app-search>
                                 </li>
                             </div>
-                            <div class="col-md-1">
+                            <div class="col-md-1 col-12 text-right text-md-left">
                                 <li class="nav-item ml-auto">
                                     <div class="custom">
                                         <div ngbDropdown class="d-inline-block notification">
@@ -53,7 +53,7 @@
                                     </div>
                                 </li>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 d-none d-md-block">
                                 <li class="user nav-item text-center">
                                     <div class="height">
                                         <div class="base-line">
@@ -64,7 +64,7 @@
                                     </div>
                                 </li>
                             </div>
-                            <div class="col-md-1">
+                            <div class="col-md-1 d-none d-md-block">
                                 <li class=" nav-item text-right">
                                     <div class="custom">
                                         <div ngbDropdown class="d-inline-block settings">
@@ -107,14 +107,14 @@
                                                     <div class="p-0 px-4">
                                                         <div class="flex-item-2">
                                                             <span class="large-font mr-2 p-0" ngbDropdownItem>A</span>
-                                                            <span class="medium-font  mr-2 p-0" ngbDropdownItem>A</span>
+                                                            <span class="medium-font  mr-2 p-0" ngbDropdownItem style="color: #8dc043">A</span>
                                                             <span class="small-font p-0" ngbDropdownItem>A</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <span class="settings__titles">Font Size</span>
                                                 <div class="settings__third-group">
-                                                    <button ngbDropdownItem>Sign out</button>
+                                                    <button ngbDropdownItem style="font-size: 18px;">Sign out</button>
                                                 </div>
                                             </div>
                                         </div>

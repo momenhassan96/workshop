@@ -1,4 +1,4 @@
-<div class="parent">
+<div class="parent  d-none d-md-block">
     <button class="holder-1" *ngIf="!clicked" (click)="clicked = !clicked"
         placement="bottom" ngbTooltip="Search" tooltipClass="custom">
         <div class="special-img">
@@ -12,6 +12,8 @@
                 class="special-img__img" />
         </div>
     </button>
-    <input type="text" class="form-control parent__input" *ngIf="clicked"
+    <div class="parent__input__parent">
+        <input type="text" class="form-control parent__input" *ngIf="clicked"
         placeholder="Search" />
+    </div>
 </div>

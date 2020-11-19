@@ -13,11 +13,12 @@ import { CardComponent } from './components/card/card.component';
 import { LimitPipe } from './pipes/limit.pipe';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { SearchFilterPipe } from './pipe/search-filter.pipe';
+import { BreadCrumpComponent } from './components/bread-crump/bread-crump.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, SearchComponent, HeaderLogoComponent, MenuHeaderComponent, CardComponent, LimitPipe, CarouselComponent, SearchFilterPipe],
+  declarations: [FooterComponent, HeaderComponent, SearchComponent, HeaderLogoComponent, MenuHeaderComponent, CardComponent, LimitPipe, CarouselComponent, SearchFilterPipe, BreadCrumpComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -36,7 +37,8 @@ import { SearchFilterPipe } from './pipe/search-filter.pipe';
     FontAwesomeModule,
     LimitPipe,
     CarouselComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    BreadCrumpComponent
   ]
 })
 export class SharedModule { 

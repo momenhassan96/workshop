@@ -38,6 +38,10 @@
         width: calculate-rem(68px);
         height: calculate-rem(39px);
     }
+
+    .dropdown-toggle::after{
+        display: none !important;
+    }
 }
 
 .nav-menu {

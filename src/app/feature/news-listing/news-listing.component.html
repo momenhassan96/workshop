@@ -1,4 +1,6 @@
-<div class="container-xl news-listing" style="min-height: 326px;">
+<section class="container-xl news-listing" style="min-height: 326px;">
+    <app-bread-crump [data]="[{name:'Home',route:''},{name:'News'}]"></app-bread-crump>
+    <p><ngb-progressbar type="success" class="m-0" [value]="percentage" *ngIf="percentage"></ngb-progressbar></p>
     <div class="my-4">
         <h4 class="news-listing__header">News</h4>
     </div>
@@ -76,4 +78,6 @@
             <app-card [data]="item"></app-card>
         </div>
     </div>
-</div>
+</section>
+
+
