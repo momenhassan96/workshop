@@ -12,7 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardComponent } from './components/card/card.component';
 import { LimitPipe } from './pipes/limit.pipe';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { SearchFilterPipe } from './pipe/search-filter.pipe';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { BreadCrumpComponent } from './components/bread-crump/bread-crump.component';
 
 
