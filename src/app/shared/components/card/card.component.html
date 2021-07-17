@@ -43,7 +43,7 @@
         </div>
         <div class="card-body">
             <div class="card-body__card-header">
-                <h5 class="card-title card-section__title"> <a routerLink="" class=""
+                <h5 class="card-title card-section__title"> <a [routerLink]="['/news-details', data['id']]" class="read-more" class=""
                         *ngIf="!details">{{data['title'] | limit :120}}</a></h5>
                 <h5 class="card-title card-section__title"> <a routerLink="" class=""
                         *ngIf="details">{{data['title'] }}</a></h5>
@@ -54,7 +54,6 @@
                 <p class="card-text card-section__body mt-2" *ngIf="details">{{data['description']}}</p>
             </div>
             <div class="card-body__card-actins mt-5 my-3">
-                <a [routerLink]="['/news-details', data['id']]" class="read-more" *ngIf="!details">Read more</a>
                 <div class="container-fluid card-section__footer">
                     <div class="row" *ngIf="!details">
                         <div class="col-2 col-md-1 mr-md-1 ">

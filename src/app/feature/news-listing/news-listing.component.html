@@ -1,10 +1,12 @@
 <section class="container-xl news-listing" style="min-height: 326px;">
     <app-bread-crump [data]="[{name:'Home',route:''},{name:'News'}]"></app-bread-crump>
-    <p><ngb-progressbar type="success" class="m-0" [value]="percentage" *ngIf="percentage"></ngb-progressbar></p>
+    <!-- <p>
+        <ngb-progressbar type="success" class="m-0" [value]="percentage" *ngIf="percentage"></ngb-progressbar>
+    </p> -->
     <div class="my-4">
         <h4 class="news-listing__header">News</h4>
     </div>
-    <form novalidate #f="ngForm" (ngSubmit)="filterData(f.form);" (keydown)="enterClicked($event,f.form)">
+    <form novalidate #f="ngForm" (submit)="filterData(searchText,selectedCategory,selectedToDate,selectedFromDate);">
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="row">
@@ -13,9 +15,9 @@
                             <label class="d-inline-block">From</label>
                             <div class="input-group">
                                 <input class="form-control" placeholder="yyyy-mm-dd" name="from" ngbDatepicker
-                                    #d="ngbDatepicker" name="category" #from="ngModel" [(ngModel)]="selectedFromDate">
+                                    #s="ngbDatepicker" #from="ngModel" [(ngModel)]="selectedFromDate">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                                    <button class="btn btn-outline-secondary calendar" (click)="s.toggle()"
                                         type="button"><img src="../../../assets/images/calender.png" /></button>
                                 </div>
                             </div>
@@ -25,7 +27,7 @@
                         <label class="d-inline-block">to</label>
                         <div class="input-group">
                             <input class="form-control" placeholder="yyyy-mm-dd" name="to" ngbDatepicker
-                                #d="ngbDatepicker" name="category" #to="ngModel" [(ngModel)]="selectedToDate">
+                                #d="ngbDatepicker" #to="ngModel" [(ngModel)]="selectedToDate">
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary calendar" (click)="d.toggle()"
                                     type="button"><img src="../../../assets/images/calender.png" /></button>
@@ -47,9 +49,11 @@
                                 <div class="col-sm-12">
                                     <div class="search__group">
                                         <input class="" type="text" name="search" #to="ngModel" [(ngModel)]="searchText"
-                                            class="search__input form-control" (ngModelChange)="clickedToSearch = false"/>
+                                            class="search__input form-control"
+                                            (ngModelChange)="clickedToSearch = false" />
                                         <div class="search__but">
-                                            <button class="" type="submit"><img
+                                            
+                                            <button class="" type="submit" [disabled]="f.invalid"><img
                                                     src="../../../assets/images/search.png" /></button>
                                         </div>
                                     </div>
@@ -59,25 +63,38 @@
                     </div>
                     <div class="d-none d-xl-block col-md-1 mb-sm-3 my-3 ml-md-3 text-right">
                         <div class="marginTop">
-                            <img src="../../../assets/images/sort by.png" style="width:55px;" />
+                            <div class="col">
+                                <div ngbDropdown class="d-inline-block">
+                                    <button class="btn btn-outline-primary sort-but" id="dropdownBasic1"
+                                        ngbDropdownToggle type="button">
+                                        <img src="../../../assets/images/sort by.png" style="width:55px;" />
+                                    </button>
+                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                        <button ngbDropdownItem type="button" (click)="asc()">A to Z</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button ngbDropdownItem type="button" (click)="dsc()">Z to A</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-    <div class="container-fluid my-3">
-        <div class="row">
-            <div class="col-md-12">
-                <button (click)="loadMore()" class="load-more" *ngIf="!clickedToSearch">Loade more</button>
-            </div>
+    <div class="row" [hidden]="!allData.length">
+        <div class="col-sm-12 col-md-12 col-lg-4 p-2"
+            *ngFor="let item of allData | searchFilter: searchText | slice: (page-1) * pageSize : page * pageSize">
+            <app-card [data]="item"></app-card>
+        </div>
+        <div class="col-12">
+            <ngb-pagination [collectionSize]="allData?.length" [(page)]="page" aria-label="Default pagination">
+            </ngb-pagination>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-4 p-2" *ngFor="let item of firstItemsDisplay | searchFilter: searchText : selectedCategory : clickedToSearch">
-            <app-card [data]="item"></app-card>
+    <div class="col-12" [hidden]="allData.length">
+        <div class="alert alert-danger">
+            No Record Found.
         </div>
     </div>
 </section>
-
-

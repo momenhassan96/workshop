@@ -12,3 +12,15 @@
  .margin{
     margin:calculate-rem(0px) calculate-rem(80px) !important;
  }
+ .page-link{
+     color:$green-color !important;
+ }
+ .page-item.active .page-link{
+     background-color: $green-color !important;
+     border-color:$green-color !important;
+     color:$white-color !important;
+ }
+
+ button[disabled]{
+    cursor:not-allowed !important;
+ }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavItems } from 'src/app/interfaces/navi-tems.model';
 
 @Component({
   selector: 'app-menu-header',
@@ -8,7 +7,7 @@ import { NavItems } from 'src/app/interfaces/navi-tems.model';
 })
 export class MenuHeaderComponent implements OnInit {
   isHumburgerMenu: boolean;
-  navItems: Array<NavItems>;
+  navItems: Array<{}>;
   constructor() {
     this.navItems = [
       { label: 'Home', route: '/home' },

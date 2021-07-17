@@ -39,6 +39,15 @@ ngb-datepicker {
     }
 }
 
+.sort-but{
+    background-color: $white-color !important;
+    color:$green-color !important;
+    border-color:$green-color !important;
+}
+
+.dropdown-toggle::after{
+    display: none !important;
+}
 
 .load-more{
     width:100px;

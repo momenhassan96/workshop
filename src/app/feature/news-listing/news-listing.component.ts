@@ -17,55 +17,47 @@ export class NewsListingComponent implements OnInit {
   allData: Array<{}>;
   dataToShow: Array<{}>;
   categoryList: Array<{}>;
-  firstItemsDisplay: Array<{}>
   showMoreBut = true;
-  lengthOfArray: number;
   getDataDisplayLength: number;
   faLongArrowAltRight = faLongArrowAltRight;
   clickedToSearch: boolean;
   percentage = 0;
+  page = 1;
+  pageSize = 12;
+  legnthOfData: number = 0;
   _data: Array<{}>;
   ngOnInit(): void {
+    this.getALlData();
+  }
+
+  getALlData() {
     this.service.getAllData().subscribe(response => {
       this.categoryList = response['sourceCategory'];
       this.allData = this.service.sortFuncbyNewDate(response['articles'], 'publishedAt');
-      this.firstItemsDisplay = this.allData.slice(0, 6);
-      this.lengthOfArray = this.allData.length;
-      this.clickedToSearch = false;
+      this._data = [...this.allData];
+      this.legnthOfData = this.allData.length;
     });
   }
-
-  filterData(formValue) {
+  filterData(searchText, selectedCategory, toDate, fromDate) {
     this.percentage = 0;
-    this.clickedToSearch = true;
-    const interval = setInterval(() => {
-      this.percentage += 1;
-      if (this.percentage == 100) {
-        clearInterval(interval)
-        this.percentage = 0;
-      }
-    }, 60)
+    if (selectedCategory && toDate && fromDate) {
+      this.allData = this._data.filter(item => {
+        const getToDate = new Date(`${toDate.year}-${toDate.month}-${toDate.day}`);
+        const getFromDate = new Date(`${fromDate.year}-${fromDate.month}-${fromDate.day}`);
+        const getPublishedAt = new Date(item['publishedAt']);
+        if (Object.values(item).toString().toLowerCase().includes(searchText.toLowerCase()) && item['sourceID'] == selectedCategory && (getPublishedAt <= getToDate && getPublishedAt >= getFromDate)) {
+          debugger;
+          return item;
+        }
+      })
+    }
   };
 
-
-
-  enterClicked($event, formValue) {
-    if ($event.code === 'Enter') {
-      this.filterData(formValue);
-    }
+  asc() {
+    this.allData.sort((a, b) => a['title'] > b['title'] ? 1 : -1);
   }
 
-  loadMore() {
-    this.getDataDisplayLength = this.firstItemsDisplay.length;
-    const newDispaly = this.getDataDisplayLength + 6;
-    const checked = this.lengthOfArray - newDispaly;
-    if (checked % 2 === 0) {
-      this.firstItemsDisplay = [];
-      const newArr = this.allData.slice(0, newDispaly).reverse();
-      newArr.forEach(ietm => { this.firstItemsDisplay.push(ietm); });
-    } else {
-      const newArr = this.allData.slice(0, this.lengthOfArray).reverse();
-      newArr.forEach(ietm => { this.firstItemsDisplay.push(ietm); });
-    }
+  dsc() {
+    this.allData.sort((a, b) => a['title'] > b['title'] ? -1 : 1);
   }
 }
